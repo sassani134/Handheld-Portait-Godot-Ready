@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://cw0b6ct3ou8se"]
+
+[ext_resource type="FontFile" uid="uid://or3hbo0quntq" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Ubuntu/Ubuntu-Regular.ttf" id="1_wuocu"]
+
+[resource]
+default_font = ExtResource("1_wuocu")
