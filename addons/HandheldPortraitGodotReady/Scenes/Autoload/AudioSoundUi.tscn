@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dk1s1plult3vb"]
+
+[ext_resource type="Script" uid="uid://e80yhdtc86oc" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/NodeSoundUi.gd" id="1_440wo"]
+[ext_resource type="AudioStream" uid="uid://dnsbwse64pwq8" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/click_001.ogg" id="1_h01s4"]
+[ext_resource type="AudioStream" uid="uid://c2bgwiw1gu1h3" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/select_004.ogg" id="2_pqkdv"]
+[ext_resource type="AudioStream" uid="uid://df0ha23v52ybr" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/drop_002.ogg" id="3_ciury"]
+[ext_resource type="AudioStream" uid="uid://c6vwo5yrw4vlg" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/confirmation_002.ogg" id="4_qi6pi"]
+[ext_resource type="AudioStream" uid="uid://cpdqefg07h0q4" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/error_002.ogg" id="6_echap"]
+[ext_resource type="AudioStream" uid="uid://c8wtlbkn0ogdg" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/back_002.ogg" id="7_r81ud"]
+[ext_resource type="AudioStream" uid="uid://c8mcsjp11rq0a" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/glass_002.ogg" id="8_kntlo"]
+[ext_resource type="AudioStream" uid="uid://ciahturx87mee" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/glitch_002.ogg" id="9_6lp0c"]
+[ext_resource type="AudioStream" uid="uid://dhdod3pau6h5c" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/maximize_002.ogg" id="10_5t66b"]
+[ext_resource type="AudioStream" uid="uid://c661utq502pwb" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/kenneyInterfaceSounds/Audio/minimize_002.ogg" id="11_vxyh7"]
+
+[node name="AudioSoundsUi" type="Node" unique_id=833553810]
+script = ExtResource("1_440wo")
+
+[node name="AudioStreamPlayerClick" type="AudioStreamPlayer" parent="." unique_id=1105956995]
+stream = ExtResource("1_h01s4")
+
+[node name="AudioStreamPlayerHover" type="AudioStreamPlayer" parent="." unique_id=568037537]
+stream = ExtResource("2_pqkdv")
+
+[node name="AudioStreamPlayerDrop" type="AudioStreamPlayer" parent="." unique_id=1051398638]
+stream = ExtResource("3_ciury")
+
+[node name="AudioStreamPlayerConfirmation" type="AudioStreamPlayer" parent="." unique_id=171503469]
+stream = ExtResource("4_qi6pi")
+
+[node name="AudioStreamPlayerError" type="AudioStreamPlayer" parent="." unique_id=231158279]
+stream = ExtResource("6_echap")
+
+[node name="AudioStreamPlayerBack" type="AudioStreamPlayer" parent="." unique_id=1307520269]
+stream = ExtResource("7_r81ud")
+
+[node name="AudioStreamPlayerGlass" type="AudioStreamPlayer" parent="." unique_id=422187224]
+stream = ExtResource("8_kntlo")
+
+[node name="AudioStreamPlayerGlitch" type="AudioStreamPlayer" parent="." unique_id=1545829971]
+stream = ExtResource("9_6lp0c")
+
+[node name="AudioStreamPlayerMaximize" type="AudioStreamPlayer" parent="." unique_id=288618240]
+stream = ExtResource("10_5t66b")
+
+[node name="AudioStreamPlayerDropMinimize" type="AudioStreamPlayer" parent="." unique_id=406848860]
+stream = ExtResource("11_vxyh7")

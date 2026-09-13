@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://c254mi4vof273"]
+
+[ext_resource type="Script" uid="uid://cvy82vnwup5m4" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/MainMenu.gd" id="1_qjmbv"]
+[ext_resource type="PackedScene" uid="uid://ht3yetxl1260" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/OptionButtonLocalizationScene.tscn" id="2_d3w6f"]
+[ext_resource type="FontFile" uid="uid://dikhr5qtlwygm" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Ubuntu/Ubuntu-BoldItalic.ttf" id="3_nenuw"]
+[ext_resource type="FontFile" uid="uid://c8tgxa47cmvfd" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Myfont00-Regular.ttf" id="4_a8iee"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="5_d3w6f"]
+
+[node name="MainMenu" type="Control" unique_id=1757338730 node_paths=PackedStringArray("button_play", "button_option", "button_credits", "button_don", "button_quit", "label_version")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_qjmbv")
+button_play = NodePath("MarginContainerSafeZone/VBoxContainer/VBoxContainer/ButtonPlay")
+button_option = NodePath("MarginContainerSafeZone/VBoxContainer/VBoxContainer/ButtonOptions")
+button_credits = NodePath("MarginContainerSafeZone/VBoxContainer/VBoxContainer/ButtonCredits")
+button_don = NodePath("MarginContainerSafeZone/VBoxContainer/VBoxContainer/ButtonDons")
+button_quit = NodePath("MarginContainerSafeZone/VBoxContainer/VBoxContainer/ButtonQuit")
+label_version = NodePath("MarginContainerSafeZone/VBoxContainer/HBoxContainer2/LabelVersion")
+
+[node name="MarginContainerSafeZone" type="MarginContainer" parent="." unique_id=1994984844]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainerSafeZone" unique_id=605982219]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainerSafeZone/VBoxContainer" unique_id=401386317]
+layout_mode = 2
+
+[node name="OptionButtonLocalization" parent="MarginContainerSafeZone/VBoxContainer/HBoxContainer" unique_id=427678984 groups=["ui_buttons"] instance=ExtResource("2_d3w6f")]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainerSafeZone/VBoxContainer" unique_id=53590495]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="VBoxContainerTitle" type="VBoxContainer" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=996977180]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="RichTextLabelTitle" type="RichTextLabel" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer/VBoxContainerTitle" unique_id=1373106334]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_nenuw")
+bbcode_enabled = true
+text = "[center][font_size=85][color=#001a66][i]GODOT READY[/i][/color][/font_size]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabelTitle2" type="RichTextLabel" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer/VBoxContainerTitle" unique_id=102022743]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_a8iee")
+bbcode_enabled = true
+text = "[center][font_size=80][color=#ff00ff]H[/color][color=#aa00ff]a[/color][color=#00ff44]n[/color][color=#ffdd00]d[/color][color=#00ddff]h[/color][color=#00ddff]e[/color][color=#ffdd00]l[/color][color=#00ff44]d[/color] [color=#aa00ff]P[/color][color=#ff00ff]o[/color][color=#ff00ff]r[/color][color=#aa00ff]t[/color][color=#00ff44]r[/color][color=#ffdd00]a[/color][color=#00ddff]i[/color][color=#00ddff]t[/color][/font_size][/center]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonPlay" type="Button" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=1665256324 groups=["ui_buttons"]]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../../HBoxContainer/OptionButtonLocalization")
+focus_neighbor_bottom = NodePath("../ButtonOptions")
+focus_next = NodePath("../ButtonOptions")
+theme_override_font_sizes/font_size = 32
+text = "KEY_PLAY"
+script = ExtResource("5_d3w6f")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonOptions" type="Button" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=1207215006 groups=["ui_buttons"]]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ButtonPlay")
+focus_neighbor_bottom = NodePath("../ButtonCredits")
+theme_override_font_sizes/font_size = 32
+text = "KEY_OPTIONS"
+script = ExtResource("5_d3w6f")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonCredits" type="Button" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=1850382942 groups=["ui_buttons"]]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ButtonOptions")
+focus_neighbor_bottom = NodePath("../ButtonDons")
+theme_override_font_sizes/font_size = 32
+text = "KEY_CREDITS"
+script = ExtResource("5_d3w6f")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonDons" type="Button" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=136638666 groups=["ui_buttons"]]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ButtonCredits")
+focus_neighbor_bottom = NodePath("../ButtonQuit")
+theme_override_font_sizes/font_size = 32
+text = "KEY_DONS"
+script = ExtResource("5_d3w6f")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonQuit" type="Button" parent="MarginContainerSafeZone/VBoxContainer/VBoxContainer" unique_id=1478577940 groups=["ui_buttons"]]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_top = NodePath("../ButtonDons")
+theme_override_font_sizes/font_size = 32
+text = "KEY_QUIT"
+script = ExtResource("5_d3w6f")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainerSafeZone/VBoxContainer" unique_id=1734297061]
+layout_mode = 2
+alignment = 2
+
+[node name="LabelCreator" type="Label" parent="MarginContainerSafeZone/VBoxContainer/HBoxContainer2" unique_id=971570631]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 26
+text = "Ginaz"
+vertical_alignment = 1
+
+[node name="LabelVersion" type="Label" parent="MarginContainerSafeZone/VBoxContainer/HBoxContainer2" unique_id=447063091]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_font_sizes/font_size = 26
+text = "v9.9.1"

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://caqk2281od30q"]
+
+[ext_resource type="Script" uid="uid://gduk80ow1ls0" path="res://addons/HandheldPortraitGodotReady/Scripts/Autoload/SettingsManager.gd" id="1_6pjj0"]
+
+[node name="SettingsManager" type="Node" unique_id=470114283]
+script = ExtResource("1_6pjj0")

@@ -1,0 +1,371 @@
+[gd_scene format=3 uid="uid://bqqpq11uxnbo4"]
+
+[ext_resource type="Texture2D" uid="uid://y301xgvtnwqb" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_a.svg" id="1_0ui02"]
+[ext_resource type="Script" uid="uid://c54o6iyr3sdc8" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/ControllerConfigScene.gd" id="1_t5hdf"]
+[ext_resource type="Texture2D" uid="uid://cv1wmluokms4o" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_b.svg" id="2_m5yls"]
+[ext_resource type="Texture2D" uid="uid://di2fs310dc701" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_x.svg" id="3_kuwu8"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="3_t5hdf"]
+[ext_resource type="Texture2D" uid="uid://c782j4ky33fb4" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_y.svg" id="4_d4ptl"]
+[ext_resource type="Texture2D" uid="uid://6dr5xab5gk6j" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/StartSelectButton.png" id="5_1ryta"]
+[ext_resource type="Texture2D" uid="uid://ddcena8yn65aa" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_a_outline.svg" id="6_pre0n"]
+[ext_resource type="Texture2D" uid="uid://b8b2eate6v48g" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_b_outline.svg" id="7_60qem"]
+[ext_resource type="Texture2D" uid="uid://cecxd88fckb62" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_x_outline.svg" id="8_782hk"]
+[ext_resource type="Texture2D" uid="uid://b0ho7rctgl5l4" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_y_outline.svg" id="9_ab6tb"]
+[ext_resource type="Texture2D" uid="uid://bw8wv71fn5l3" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/StartSelectButtonOutline.png" id="10_mq80y"]
+
+[node name="LabelVirtualButtonStart" type="Control" unique_id=323392761 node_paths=PackedStringArray("button_virtual_button_a", "button_virtual_button_b", "button_virtual_button_x", "button_virtual_button_y", "button_virtual_button_start", "button_virtual_button_select", "button_virtual_button_a_pressed", "button_virtual_button_b_pressed", "button_virtual_button_x_pressed", "button_virtual_button_y_pressed", "button_virtual_button_start_pressed", "button_virtual_button_select_pressed", "button_save", "button_reset")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t5hdf")
+button_virtual_button_a = NodePath("")
+button_virtual_button_b = NodePath("")
+button_virtual_button_x = NodePath("")
+button_virtual_button_y = NodePath("")
+button_virtual_button_start = NodePath("")
+button_virtual_button_select = NodePath("")
+button_virtual_button_a_pressed = NodePath("")
+button_virtual_button_b_pressed = NodePath("")
+button_virtual_button_x_pressed = NodePath("")
+button_virtual_button_y_pressed = NodePath("")
+button_virtual_button_start_pressed = NodePath("")
+button_virtual_button_select_pressed = NodePath("")
+button_save = NodePath("MarginContainer/VBoxContainer/ButtonSave")
+button_reset = NodePath("MarginContainer/VBoxContainer/ButtonReset")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=694753205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=543574070]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=967866294]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=1974299538]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="HBoxContainerControllerVibration" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=744638626]
+layout_mode = 2
+
+[node name="LabelControllerVibration" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerControllerVibration" unique_id=1176655826]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_CONTROLLER_VIBRATION"
+
+[node name="CheckBoxControllerVibration" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerControllerVibration" unique_id=1243524598]
+layout_mode = 2
+button_pressed = true
+
+[node name="HBoxContainerPhoneVibration" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=492078453]
+layout_mode = 2
+
+[node name="LabelPhoneVibration" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerPhoneVibration" unique_id=896050832]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_PHONE_VIBRATION"
+
+[node name="CheckBoxPhoneVibration" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerPhoneVibration" unique_id=877966635]
+layout_mode = 2
+size_flags_horizontal = 8
+button_pressed = true
+
+[node name="HBoxContainerVirtualJoystickMode" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=450210086]
+layout_mode = 2
+
+[node name="LabelVirtualJoystickMode" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickMode" unique_id=1809513282]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_JOYSTICK_MODE"
+
+[node name="OptionButtonVirtualJoystickMode" type="OptionButton" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickMode" unique_id=179324691]
+layout_mode = 2
+alignment = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "KEY_FIXED"
+popup/item_0/id = 0
+popup/item_1/text = "KEY_DYNAMIC"
+popup/item_1/id = 1
+popup/item_2/text = "KEY_FOLLOWING"
+popup/item_2/id = 2
+
+[node name="HBoxContainerVirtualJoystickClampzoneRatio" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2127291875]
+layout_mode = 2
+
+[node name="LabelClampzoneRatio" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickClampzoneRatio" unique_id=1341870107]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_JOYSTICK_CLAMPZONE_RATIO"
+
+[node name="TextEditClampzoneRatio" type="TextEdit" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickClampzoneRatio" unique_id=1777830329]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "1.0"
+placeholder_text = "FLOAT"
+emoji_menu_enabled = false
+
+[node name="HBoxContainerVirtualJoystickDeadzoneRatio" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=962487303]
+layout_mode = 2
+
+[node name="LabelDeadzoneRatio" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickDeadzoneRatio" unique_id=463636135]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_JOYSTICK_DEADZONE_RATIO"
+
+[node name="TextEditDeadzoneRatio" type="TextEdit" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickDeadzoneRatio" unique_id=207421562]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "0.0"
+placeholder_text = "FLOAT"
+emoji_menu_enabled = false
+
+[node name="HBoxContainerVirtualJoystickSize" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=438270100]
+layout_mode = 2
+
+[node name="LabelJoystickSize" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickSize" unique_id=1561938992]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_JOYSTICK_SIZE"
+
+[node name="TextEditJoystickSize" type="TextEdit" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualJoystickSize" unique_id=614130602]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "100.0"
+placeholder_text = "FLOAT"
+emoji_menu_enabled = false
+
+[node name="HBoxContainerVirtualTipSize" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=646954120]
+layout_mode = 2
+
+[node name="LabelTipeSize" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualTipSize" unique_id=1231582081]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_TIP_SIZE"
+
+[node name="TextEditTipSize" type="TextEdit" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualTipSize" unique_id=1206299287]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "50.0"
+placeholder_text = "FLOAT"
+emoji_menu_enabled = false
+
+[node name="HBoxContainerTouchScreenSize" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=184629641]
+layout_mode = 2
+
+[node name="LabelTouchScreenSize" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerTouchScreenSize" unique_id=282069231]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_TOUCH_SCREEN_SIZE"
+
+[node name="TextEditTouchScreenSize" type="TextEdit" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerTouchScreenSize" unique_id=1259359497]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+text = "1.0"
+placeholder_text = "FLOAT"
+emoji_menu_enabled = false
+
+[node name="HBoxContainerVirtualButtonA" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=282266408]
+layout_mode = 2
+
+[node name="LabelVirtualButtonRight" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonA" unique_id=1510335018]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_RIGHT"
+
+[node name="ButtonVirtualButtonA" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonA" unique_id=1735402649]
+layout_mode = 2
+icon = ExtResource("1_0ui02")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerButtonB" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1845834470]
+layout_mode = 2
+
+[node name="LabelVirtualButtonBottom" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonB" unique_id=1920483466]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_BOTTOM"
+
+[node name="ButtonVirtualButtonB" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonB" unique_id=392294825]
+layout_mode = 2
+icon = ExtResource("2_m5yls")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerButtonX" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1686732837]
+layout_mode = 2
+
+[node name="LabelVirtualButtonTop" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonX" unique_id=1273778607]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_TOP"
+
+[node name="ButtonVirtualButtonX" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonX" unique_id=957938615]
+layout_mode = 2
+icon = ExtResource("3_kuwu8")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonY" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1986465826]
+layout_mode = 2
+
+[node name="LabelVirtualButtonLeft" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonY" unique_id=677544954]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_LEFT"
+
+[node name="ButtonVirtualButtonY" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonY" unique_id=1010965311]
+layout_mode = 2
+icon = ExtResource("4_d4ptl")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonStart" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1251581847]
+layout_mode = 2
+
+[node name="LabelVirtualButtonStart" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonStart" unique_id=106096033]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_START"
+
+[node name="ButtonVirtualButtonStart" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonStart" unique_id=40252492]
+layout_mode = 2
+icon = ExtResource("5_1ryta")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonSelect" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=276369594]
+layout_mode = 2
+
+[node name="LabelVirtualButtonSelect" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonSelect" unique_id=1921028762]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_SELECT"
+
+[node name="ButtonVirtualButtonSelect" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonSelect" unique_id=725162050]
+layout_mode = 2
+icon = ExtResource("5_1ryta")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonA2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1451300069]
+layout_mode = 2
+
+[node name="LabelVirtualButtonRight" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonA2" unique_id=1053624041]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_RIGHT_CLICK"
+
+[node name="ButtonVirtualButtonA" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonA2" unique_id=99182322]
+layout_mode = 2
+icon = ExtResource("6_pre0n")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerButtonB2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=502512420]
+layout_mode = 2
+
+[node name="LabelVirtualButtonBottom" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonB2" unique_id=1926970194]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_BOTTOM_CLICK"
+
+[node name="ButtonVirtualButtonB" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonB2" unique_id=415924549]
+layout_mode = 2
+icon = ExtResource("7_60qem")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerButtonX2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1853336782]
+layout_mode = 2
+
+[node name="LabelVirtualButtonTop" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonX2" unique_id=1977942561]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_TOP_CLICK"
+
+[node name="ButtonVirtualButtonX" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerButtonX2" unique_id=1029298290]
+layout_mode = 2
+icon = ExtResource("8_782hk")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonY2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=484284375]
+layout_mode = 2
+
+[node name="LabelVirtualButtonLeft" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonY2" unique_id=1427437119]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_LEFT_CLICK"
+
+[node name="ButtonVirtualButtonY" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonY2" unique_id=955213578]
+layout_mode = 2
+icon = ExtResource("9_ab6tb")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonStart2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=968174876]
+layout_mode = 2
+
+[node name="LabelVirtualButtonStart" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonStart2" unique_id=1935172711]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_START_CLICK"
+
+[node name="ButtonVirtualButtonStart" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonStart2" unique_id=570711597]
+layout_mode = 2
+icon = ExtResource("10_mq80y")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="HBoxContainerVirtualButtonSelect2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=812343017]
+layout_mode = 2
+
+[node name="LabelVirtualButtonSelect" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonSelect2" unique_id=1356840929]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VIRTUAL_BUTTON_SELECT_CLICK"
+
+[node name="ButtonVirtualButtonSelect" type="Button" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainerVirtualButtonSelect2" unique_id=1805082778]
+layout_mode = 2
+icon = ExtResource("10_mq80y")
+icon_alignment = 1
+script = ExtResource("3_t5hdf")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonSave" type="Button" parent="MarginContainer/VBoxContainer" unique_id=332736438]
+layout_mode = 2
+text = "KEY_SAVE"
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=993933125]
+layout_mode = 2
+text = "KEY_RESET"

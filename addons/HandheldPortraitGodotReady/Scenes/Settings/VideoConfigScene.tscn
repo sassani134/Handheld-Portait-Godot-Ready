@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://46xhjuo5y8bm"]
+
+[ext_resource type="Script" uid="uid://bwaxokhvxqydp" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/VideoSettings.gd" id="1_ct75d"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="2_0h4so"]
+
+[node name="VideoScene" type="Control" unique_id=323392761 node_paths=PackedStringArray("resolution_option", "vsync_check", "fps_count_check", "fps_option", "anti_aliasing_check", "camera_shake")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ct75d")
+resolution_option = NodePath("MarginContainer/VBoxContainer/HBoxContainer/OptionButtonResolution")
+vsync_check = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/CheckBoxVsync")
+fps_count_check = NodePath("MarginContainer/VBoxContainer/HBoxContainer3/CheckButton")
+fps_option = NodePath("MarginContainer/VBoxContainer/HBoxContainer4/OptionButtonFpsCount")
+anti_aliasing_check = NodePath("MarginContainer/VBoxContainer/HBoxContainer5/CheckBoxAntiAlias")
+camera_shake = NodePath("MarginContainer/VBoxContainer/HBoxContainer6/CheckBoxCameraShake")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=694753205]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1974299538]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=744638626]
+layout_mode = 2
+
+[node name="LabelResolution" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1176655826]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_RESOLUTION"
+
+[node name="OptionButtonResolution" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=479780119]
+layout_mode = 2
+size_flags_horizontal = 8
+selected = 0
+item_count = 2
+popup/item_0/text = "720*1280"
+popup/item_0/id = 0
+popup/item_1/text = "1080*1920"
+popup/item_1/id = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=492078453]
+layout_mode = 2
+
+[node name="LabelVsync" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=896050832]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_VSYNC"
+
+[node name="CheckBoxVsync" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=15117786]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=450210086]
+layout_mode = 2
+
+[node name="LabelFpsCount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1809513282]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_FPS_COUNT"
+
+[node name="CheckButton" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1001598881]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=282266408]
+layout_mode = 2
+
+[node name="LabelFpsCount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1510335018]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "FPS_COUNT"
+
+[node name="OptionButtonFpsCount" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=700796558]
+layout_mode = 2
+selected = 0
+item_count = 6
+popup/item_0/text = "KEY_UNLIMITED"
+popup/item_0/id = 0
+popup/item_1/text = "120"
+popup/item_1/id = 1
+popup/item_2/text = "90"
+popup/item_2/id = 2
+popup/item_3/text = "60"
+popup/item_3/id = 3
+popup/item_4/text = "30"
+popup/item_4/id = 4
+popup/item_5/text = "20"
+popup/item_5/id = 5
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=451142784]
+layout_mode = 2
+
+[node name="LabelAntiAlias" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1912856234]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_ANTI_ALIAS"
+
+[node name="CheckBoxAntiAlias" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=326416098]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=914154275]
+layout_mode = 2
+
+[node name="LabelCameraShake" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=1451641910]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "KEY_CAMERA_SHAKE"
+
+[node name="CheckBoxCameraShake" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer6" unique_id=390197412]
+layout_mode = 2
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=241047615]
+layout_mode = 2
+text = "KEY_RESET"
+script = ExtResource("2_0h4so")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"

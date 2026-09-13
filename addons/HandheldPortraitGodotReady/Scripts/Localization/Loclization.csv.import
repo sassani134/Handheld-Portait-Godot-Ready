@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c3lvnbv1eatx4"
+
+[deps]
+
+files=["res://addons/HandheldPortraitGodotReady/Scripts/Localization/Loclization.en.translation", "res://addons/HandheldPortraitGodotReady/Scripts/Localization/Loclization.fr.translation"]
+
+source_file="res://addons/HandheldPortraitGodotReady/Scripts/Localization/Loclization.csv"
+dest_files=["res://addons/HandheldPortraitGodotReady/Scripts/Localization/Loclization.en.translation", "res://addons/HandheldPortraitGodotReady/Scripts/Localization/Loclization.fr.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

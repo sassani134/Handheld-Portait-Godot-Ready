@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dlp3vx84d7uxi"]
+
+[ext_resource type="PackedScene" uid="uid://dgcae63i0lld2" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagram.tscn" id="1_kf8bg"]
+[ext_resource type="PackedScene" uid="uid://b3g0mekaw3qcl" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramGamecube.tscn" id="2_hwb5w"]
+[ext_resource type="PackedScene" uid="uid://dx2b7ftvt8mnw" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramPs3.tscn" id="3_we308"]
+[ext_resource type="PackedScene" uid="uid://c47s3vdjd2elq" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramPs4.tscn" id="4_yihpk"]
+[ext_resource type="PackedScene" uid="uid://comxpiewcjotp" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramPs5.tscn" id="5_f7bhd"]
+[ext_resource type="PackedScene" uid="uid://be3npg43bxk8c" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramSteamController.tscn" id="6_hblr0"]
+[ext_resource type="PackedScene" uid="uid://78yewdu8x4fn" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramSwitch.tscn" id="7_fl2ul"]
+[ext_resource type="PackedScene" uid="uid://b3v327vrtfmpn" path="res://addons/HandheldPortraitGodotReady/Scenes/Props/JoypadDiagramXbox.tscn" id="8_gdbfu"]
+
+[node name="JoypadsDiagrams" type="Node2D" unique_id=1930895870]
+
+[node name="JoypadDiagram" parent="." unique_id=1950156685 instance=ExtResource("1_kf8bg")]
+
+[node name="JoypadDiagramGC" parent="." unique_id=2002385295 instance=ExtResource("2_hwb5w")]
+visible = false
+
+[node name="JoypadDiagramPs3" parent="." unique_id=1378455084 instance=ExtResource("3_we308")]
+visible = false
+
+[node name="JoypadDiagramPs4" parent="." unique_id=276688527 instance=ExtResource("4_yihpk")]
+visible = false
+
+[node name="JoypadDiagramPs5" parent="." unique_id=687346980 instance=ExtResource("5_f7bhd")]
+visible = false
+
+[node name="JoypadDiagramSteam" parent="." unique_id=1943792735 instance=ExtResource("6_hblr0")]
+visible = false
+
+[node name="JoypadDiagramSwitch" parent="." unique_id=1851349360 instance=ExtResource("7_fl2ul")]
+visible = false
+
+[node name="JoypadDiagramXbox" parent="." unique_id=779781946 instance=ExtResource("8_gdbfu")]
+visible = false

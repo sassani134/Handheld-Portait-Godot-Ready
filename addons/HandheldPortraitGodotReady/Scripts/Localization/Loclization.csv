@@ -1,0 +1,68 @@
+KEYS,en,fr
+KEY_PLAY,Play,Jouer
+KEY_OPTIONS,Options,Options
+KEY_CREDITS,Credits,Crédits
+KEY_DONS,Donations,Dons
+KEY_QUIT,Quit,Quitter
+KEY_ENGLISH,English,Anglais
+KEY_FRENCH,French,Français
+KEY_PAUSED,Paused,En pause
+KEY_RESUME,Resume,Reprendre
+KEY_RESTART,Restart,Recommencer
+,,
+KEY_MAIN_MENU,Main menu,Menu principale
+KEY_EXIT,Quit to Desktop,Retour au bureau
+KEY_MASTER,Master,Master
+KEY_MUSIC,Music,Musique
+KEY_SFX,SFX,SFX
+KEY_MUTE,Mute,Muter
+KEY_RESET,Reset,Réinitialiser
+KEY_CONTROLLER_VIBRATION,Controller Vibration,Vibration manette
+KEY_VIRTUAL_BUTTON_START_CLICK,Button start click,Bouton start cliquer
+KEY_VIRTUAL_BUTTON_SELECT_CLICK,Button select click,Bouton select cliquer
+KEY_VIRTUAL_BUTTON_LEFT_CLICK,Left button click,Bouton de gauche cliquer
+KEY_VIRTUAL_BUTTON_TOP_CLICK,Top button click,Bouton du haut cliquer
+KEY_VIRTUAL_BUTTON_BOTTOM_CLICK,Bottom button click,Bouton du bas cliquer
+KEY_VIRTUAL_BUTTON_RIGHT_CLICK,Right button click,Bouton de droite cliquer
+KEY_VIRTUAL_BUTTON_SELECT,Button start,Bouton start
+KEY_VIRTUAL_BUTTON_START,Button select,Bouton select
+KEY_VIRTUAL_BUTTON_LEFT,Left button,Bouton de gauche
+KEY_VIRTUAL_BUTTON_TOP,Top button,Bouton du haut
+KEY_VIRTUAL_BUTTON_BOTTOM,Bottom button ,Bouton du bas
+KEY_VIRTUAL_BUTTON_RIGHT,Right button click,Bouton de droite
+KEY_VIRTUAL_TOUCH_SCREEN_SIZE,Touch Screen button Size,Taille Bouton TouchScreen
+KEY_VIRTUAL_TIP_SIZE,Tip Size, Taille du Tip
+KEY_VIRTUAL_JOYSTICK_SIZE,Joystick Size,Taille du Joystick
+KEY_VIRTUAL_JOYSTICK_DEADZONE_RATIO,Deadzone ratio,Ratio de la deadzone
+KEY_VIRTUAL_JOYSTICK_CLAMPZONE_RATIO,Clampzone ratio,Ratio de la clampzone
+KEY_VIRTUAL_JOYSTICK_MODE,Joystick Mode,Mode du Joystick
+KEY_PHONE_VIBRATION,Phone Vibration,Vibration du Téléphone
+KEY_SAVE,Save,Sauvegarder
+,,
+KEY_FIXED,Fixed,Fixé
+KEY_DYNAMIC,Dynamic,Dynamique
+KEY_FOLLOWING,Following,Suivi
+KEY_MOVE_UP,Move up,Mouvement vers le Haut
+KEY_MOVE_DOWN,Move down,Mouvement vers le Bas
+KEY_MOVE_RIGHT,Move right,Mouvement vers le Droite
+KEY_MOVE_LEFT,Move left,Mouvement vers le Gauche
+KEY_ACTION_RIGHT,Right Action,Action de Droite
+KEY_ACTION_BOTTOM,Bottom Action,Action du Bas
+KEY_ACTION_TOP,Top Action,Action du Haut
+KEY_ACTION_LEFT,Left Action,Action de Gauche
+KEY_START,Start,Commencer
+KEY_SELECT,Select,Select
+KEY_MODIFY,Modify,Modifier
+,,
+KEY_BACK,Back,Retour
+KEY_RESOLUTION,Resolution,Résolution
+KEY_VSYNC,Vsync,Vsync
+KEY_FPS_COUNT,FPS Count,Nombre  de FPS
+KEY_ANTI_ALIAS,Anti aliasing,anticrénelage(anti aliasing)
+KEY_CAMERA_SHAKE,Camera Shake,tremblement Camera
+KEY_UNLIMITED,Unlimited,Illimité
+KEY_UI,UI,UI
+KEY_DEVICE,device,appareil
+KEY_WEAK_VIBRATION,Vibration Weak Motor,Vibration moteur faible
+KEY_STRONG_VIBRATION,Vibration Strong Motor:,Vibration moteur fort
+KEY_VIBRATION_DURATION,Vibration Duration,Durée de vibration

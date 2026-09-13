@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://1b477ikk3fw6"]
+
+[ext_resource type="Texture2D" uid="uid://d33vmt1osm78k" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Generic/Vector/generic_stick.svg" id="1_aqb8g"]
+[ext_resource type="Script" uid="uid://bu3f3tr8y16lf" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/MobilePlacement.gd" id="1_ne8yr"]
+[ext_resource type="Texture2D" uid="uid://y301xgvtnwqb" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_a.svg" id="2_draht"]
+[ext_resource type="Texture2D" uid="uid://cv1wmluokms4o" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_b.svg" id="3_ljjpf"]
+[ext_resource type="Texture2D" uid="uid://di2fs310dc701" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_x.svg" id="4_mwogn"]
+[ext_resource type="Texture2D" uid="uid://c782j4ky33fb4" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_y.svg" id="5_gvwcw"]
+[ext_resource type="Texture2D" uid="uid://xupbgxbvdrsr" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_plus.svg" id="6_draht"]
+[ext_resource type="Texture2D" uid="uid://drsf8b41myudn" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Switch/Vector/switch_button_minus.svg" id="6_wh5pr"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="9_44va5"]
+
+[node name="MobilePlacementScene" type="Control" unique_id=434682961 node_paths=PackedStringArray("button_modify", "button_reset")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ne8yr")
+button_modify = NodePath("MarginContainer/VBoxContainer/ButtonModify")
+button_reset = NodePath("MarginContainer/VBoxContainer/ButtonReset")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1954231944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1981720341]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=815104740]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=1426079222]
+layout_mode = 2
+color = Color(1, 1, 1, 0.3372549)
+
+[node name="Sprite2DJoystick" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=352493475]
+position = Vector2(113, 1068)
+texture = ExtResource("1_aqb8g")
+
+[node name="Sprite2D2" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=1279519639]
+position = Vector2(526, 1129)
+texture = ExtResource("2_draht")
+
+[node name="Sprite2D3" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=1656677443]
+position = Vector2(511, 1048)
+texture = ExtResource("3_ljjpf")
+
+[node name="Sprite2D4" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=39614116]
+position = Vector2(588, 1019)
+texture = ExtResource("4_mwogn")
+
+[node name="Sprite2D5" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=922423309]
+position = Vector2(639, 1132)
+texture = ExtResource("5_gvwcw")
+
+[node name="Sprite2D6" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=359427949]
+
+[node name="Sprite2D7" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=945140337]
+position = Vector2(297, 1144)
+texture = ExtResource("6_draht")
+
+[node name="Sprite2D8" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=420960870]
+position = Vector2(366, 1132)
+texture = ExtResource("6_wh5pr")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MarginContainer/VBoxContainer/MarginContainer/ColorRect" unique_id=1044177413]
+visible = false
+position = Vector2(113, 1068)
+
+[node name="ButtonModify" type="Button" parent="MarginContainer/VBoxContainer" unique_id=777530175]
+layout_mode = 2
+text = "KEY_MODIFY"
+script = ExtResource("9_44va5")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=296890940]
+layout_mode = 2
+text = "KEY_RESET"
+script = ExtResource("9_44va5")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"

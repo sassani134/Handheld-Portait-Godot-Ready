@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://dy45ciets6drn"]
+
+[ext_resource type="Script" uid="uid://ca63nk0bnrgjd" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/AudioSettings.gd" id="1_ilr5f"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="2_70iaw"]
+
+[node name="AudioScene" type="Control" unique_id=2012037920 node_paths=PackedStringArray("master_slider", "music_slider", "sfx_slider", "mute_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ilr5f")
+master_slider = NodePath("MarginContainer/VBoxContainer/HBoxContainerMaster/HSliderMaster")
+music_slider = NodePath("MarginContainer/VBoxContainer/HBoxContainerMusic/HSliderMusic")
+sfx_slider = NodePath("MarginContainer/VBoxContainer/HBoxContainerSfx/HSliderSfx")
+mute_button = NodePath("MarginContainer/VBoxContainer/HBoxContainerMute/CheckButtonMute")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1704434641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1863391337]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainerMaster" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=2581184]
+layout_mode = 2
+
+[node name="LabelMaster" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerMaster" unique_id=1702538992]
+layout_mode = 2
+text = "KEY_MASTER"
+
+[node name="HSliderMaster" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainerMaster" unique_id=1367894960]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+value = 100.0
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="HBoxContainerMusic" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1085638158]
+layout_mode = 2
+
+[node name="LabelMusic" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerMusic" unique_id=1456163364]
+layout_mode = 2
+text = "KEY_MUSIC"
+
+[node name="HSliderMusic" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainerMusic" unique_id=451453558]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+value = 50.0
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="HBoxContainerSfx" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=49122195]
+layout_mode = 2
+
+[node name="LabelSfx" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerSfx" unique_id=288002720]
+layout_mode = 2
+text = "KEY_SFX"
+
+[node name="HSliderSfx" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainerSfx" unique_id=893581216]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="HBoxContainerUi" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=997052617]
+layout_mode = 2
+
+[node name="LabelUi" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerUi" unique_id=305027178]
+layout_mode = 2
+text = "KEY_UI"
+
+[node name="HSliderUi" type="HSlider" parent="MarginContainer/VBoxContainer/HBoxContainerUi" unique_id=637091097]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+size_flags_horizontal = 10
+tick_count = 10
+ticks_on_borders = true
+ticks_position = 1
+
+[node name="HBoxContainerMute" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1336873301]
+layout_mode = 2
+
+[node name="LabelMute" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerMute" unique_id=944267639]
+layout_mode = 2
+text = "KEY_MUTE"
+
+[node name="CheckButtonMute" type="CheckButton" parent="MarginContainer/VBoxContainer/HBoxContainerMute" unique_id=827152929]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HBoxContainerTestButton" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1005065542]
+layout_mode = 2
+
+[node name="ButtonMusicTest" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTestButton" unique_id=831803191]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "KEY_MUSIC"
+script = ExtResource("2_70iaw")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonSfxTest" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTestButton" unique_id=1172838210]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "KEY_SFX"
+script = ExtResource("2_70iaw")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1094041907]
+layout_mode = 2
+text = "KEY_RESET"
+script = ExtResource("2_70iaw")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
+
+[node name="AudioStreamPlayerMusic" type="AudioStreamPlayer" parent="." unique_id=997594610]
+
+[node name="AudioStreamPlayerSFX" type="AudioStreamPlayer" parent="." unique_id=542971591]

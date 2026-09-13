@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ht3yetxl1260"]
+
+[ext_resource type="Script" uid="uid://1hn8vglcnhj5" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/LanguageSettings.gd" id="3_20ikx"]
+
+[node name="OptionButtonLocalization" type="OptionButton" unique_id=1322223833]
+offset_right = 40.0
+offset_bottom = 20.0
+script = ExtResource("3_20ikx")

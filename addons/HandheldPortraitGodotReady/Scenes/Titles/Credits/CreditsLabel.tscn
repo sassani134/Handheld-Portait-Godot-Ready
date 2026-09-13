@@ -1,0 +1,202 @@
+[gd_scene format=3 uid="uid://cdqihk3mm6u60"]
+
+[ext_resource type="Script" uid="uid://p1dyqk4lo7i3" path="res://addons/HandheldPortraitGodotReady/Scripts/Title/Credits/CreditLabel.gd" id="1_jacrc"]
+
+[node name="CreditsLabel" type="RichTextLabel" unique_id=1607502491]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[font_size=48]Collaborators[/font_size]
+
+[font_size=32]Godot Game Template[/font_size]
+[img=80]res:///addons/HandheldPortraitGodotReady/Assets/Pics/SelfMade/Espace_Chantourne_01.png[/img]  
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Assani Samuel AKA GinGinGin and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]  
+
+[font_size=64]Credits:[/font_size]
+
+
+[font_size=48]Contributions:[/font_size]
+
+[font_size=32]Development:[/font_size]
+
+[font_size=24]Takin Godot Template[/font_size]
+Created by: [url=https://github.com/TinyTakinTeller/TakinGodotTemplate/graphs/contributors]TinyTakinTeller[/url]\\
+Source: [url=https://github.com/TinyTakinTeller/TakinGodotTemplate/]github: TakinGodotTemplate[/url]\\
+License: [url=https://github.com/TinyTakinTeller/TakinGodotTemplate/blob/master/LICENSE]MIT License[/url]
+
+
+[font_size=48]Assets:[/font_size]
+
+[font_size=32]Audio:[/font_size]
+
+[font_size=24]Music: Menu Doodle 2 (Loop)[/font_size]
+Modified by: [url=https://github.com/TinyTakinTeller]TinyTakinTeller[/url]\\
+Created by: [url=https://opengameart.org/users/stumpystrust]StumpyStrust[/url]\\
+Source: [url=https://opengameart.org/content/menu-doodle-2]opengameart: Menu Doodle 2[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[font_size=24]SFX: Kenney UI[/font_size]
+Created by: [url=https://kenney.nl]Kenney Vleugels[/url]\\
+Source: [url=https://kenney.nl/assets/ui-audio]kenney.nl: UI Audio[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[font_size=32]Art:[/font_size]
+	
+[font_size=24]Kenney's Animal Pack[/font_size]
+Created by: [url=https://kenney.nl]Kenney Vleugels[/url]\\
+Source: [url=https://kenney.nl/assets/animal-pack]kenney.nl: Animal Pack[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`image/game/animal/png/*`)[/font_size]
+
+[font_size=24]Kenney's Input Prompts[/font_size]
+Created by: [url=https://kenney.nl]Kenney Vleugels[/url]\\
+Source: [url=https://kenney.nl/assets/input-prompts]kenney.nl: Input Prompts[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`image/game/animal/png/*`)[/font_size]
+
+[font_size=24]Kenney's Flag Pack[/font_size]
+Created by: [url=https://kenney.nl]Kenney Vleugels[/url]\\
+Source: [url=https://kenney.nl/assets/input-prompts]kenney.nl: Flag Pack[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`image/game/animal/png/*`)[/font_size]
+
+[font_size=24]Godot Logo (Boot Splash)[/font_size]
+Modified by: [url=https://github.com/TinyTakinTeller]TinyTakinTeller[/url]\\
+Created by: [url=https://godotengine.org/press/]Andrea Calabró[/url]\\
+Source: [url=https://godotengine.org/press/]godotengine.org: Press Kit[/url]\\
+License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`boot_splash_2560_1440.png`)[/font_size]
+[comment]: [font_size=64](`icon_1024_1024.png`)[/font_size]
+
+[font_size=24]UI Icons: Plus, Minus[/font_size]
+Created by: [url=https://github.com/Maaack]Marek Belski[/url]  
+Source: [url=https://github.com/Maaack/Godot-Menus-Template/tree/main/addons/maaacks_menus_template/base/assets/remapping_input_icons]github: Godot Menus Template[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`addition_symbol.png`)[/font_size]
+[comment]: [font_size=64](`subtraction_symbol.png`)[/font_size]
+
+[font_size=24]Save File Icon[/font_size]
+Created by: [url=https://openclipart.org/artist/dannya]Danny Allen[/url]  
+Source: [url=https://publicdomainvectors.org/en/free-clipart/File-save-icon/88085.html]openclipart.org: File save icon[/url]\\
+License: [url=https://creativecommons.org/publicdomain/zero/1.0/]CC0 (Public Domain)[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`save_file_icon.png`)[/font_size]
+[comment]: [font_size=64](`save_file_icon.svg`)[/font_size]
+
+[font_size=32]Font:[/font_size]
+
+[font_size=24]Noto Sans[/font_size]
+Created by: [url=https://github.com/notofonts/]Noto Project Authors[/url]\\
+Source: [url=https://fonts.google.com/noto/specimen/Noto+Sans]github: Noto Fonts[/url]\\
+License: [url=https://openfontlicense.org]Open Font License[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`noto_sans/woff/*.woff`)[/font_size]
+
+[font_size=32]Localization:[/font_size]
+
+
+[font_size=48]Dependencies:[/font_size]
+
+[font_size=32]Snippets:[/font_size]
+
+[font_size=24]Maaack's Godot Game Template[/font_size]
+Modified by: [url=https://github.com/TinyTakinTeller]TinyTakinTeller[/url]\\
+Created by: [url=https://github.com/Maaack]Marek Belski[/url]\\
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot Game Template[/url]\\
+License: [url=https://github.com/Maaack/Godot-Game-Template/blob/main/LICENSE.txt]MIT License[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`credits.gd`)[/font_size]
+[comment]: [font_size=64](`menu_keybind_dialog.gd`)[/font_size]
+[comment]: [font_size=64](`input_event_consts.gd`)[/font_size]
+[comment]: [font_size=64](`config_storage_app_log.gd`)[/font_size]
+[comment]: [font_size=64](`config_storage.gd`)[/font_size]
+
+[font_size=24]Maaack's Godot Game Template[/font_size]
+Modified by: [url=https://github.com/TinyTakinTeller]TinyTakinTeller[/url]\\
+Created by: [url=https://github.com/Maaack]Marek Belski[/url]\\
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot Game Template[/url]\\
+License: [url=https://github.com/Maaack/Godot-Game-Template/blob/main/LICENSE.txt]MIT License[/url]
+
+[comment]: [font_size=64]()[/font_size]
+[comment]: [font_size=64](`credits.gd`)[/font_size]
+[comment]: [font_size=64](`menu_keybind_dialog.gd`)[/font_size]
+[comment]: [font_size=64](`input_event_consts.gd`)[/font_size]
+[comment]: [font_size=64](`config_storage_app_log.gd`)[/font_size]
+[comment]: [font_size=64](`config_storage.gd`)[/font_size]
+
+[font_size=32]Plugins:[/font_size]
+
+[font_size=24]Script IDE[/font_size]
+Created by: [url=https://github.com/Maran23/script-ide/graphs/contributors]Maran23, natalie-csky, Maweill[/url]\\
+Source: [url=https://github.com/Maran23/script-ide]github: Script-IDE[/url]\\
+License: [url=https://github.com/Maran23/script-ide/blob/master/LICENSE]MIT License[/url]\\
+Version: 1.4.6
+
+[font_size=32]Tools:[/font_size]
+
+[font_size=24]Godot[/font_size]
+Created by: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]\\
+Source: [url=https://godotengine.org/]godotengine.org[/url]\\
+License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url]
+
+[font_size=24]GDScript Toolkit[/font_size]
+Created by: [url=https://github.com/Scony/godot-gdscript-toolkit/graphs/contributors]Scony and contributors[/url]\\
+Source: [url=https://github.com/Scony/godot-gdscript-toolkit]github: GDScript Toolkit[/url]\\
+License: [url=https://github.com/Scony/godot-gdscript-toolkit/blob/master/LICENSE]MIT License[/url]
+
+[font_size=24]Git[/font_size]
+Created by: [url=https://github.com/torvalds]Linus Torvalds[/url]\\
+Source: [url=https://git-scm.com/downloads]git-scm.com[/url]\\
+License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
+
+[font_size=24]Procreate[/font_size]
+Created by: [url=https://en.wikipedia.org/wiki/Procreate_(software]Savage Interactive[/url])\\
+
+[font_size=24]calligraphr[/font_size]
+Created by: [url=https://www.calligraphr.com]calligraphr[/url]\\
+
+[font_size=24]Sitra[/font_size]
+Created by: [url=https://flathub.org/fr/apps/io.github.sitraorg.sitra]Ronnie Nissan[/url]\\
+Source: [url=https://github.com/sitraorg/sitra]sitra[/url]\\
+License: [url=https://opensource.org/licenses/GPL-3.0]GNU General Public License version 3[/url]
+
+[font_size=24]SFXR[/font_size]
+Created by: [url=https://github.com/hugemenace/resonate/graphs/contributors]hugemenace and contributors[/url]\\
+Source: [url=https://github.com/chr15m/jsfxr]github: Resonate[/url]\\
+
+[font_size=24]gameuidatabase[/font_size]
+[url=https://www.gameuidatabase.com/]gameuidatabase[/url]
+
+[font_size=24]google fonts[/font_size]
+[url=https://fonts.google.com/]goole font[/url]
+
+[font_size=24]avid[/font_size]
+[url=https://www.avid.wiki/]avid[/url]
+
+[font_size=32]Tuto:[/font_size]
+
+[font_size=24]16bitdev[/font_size]
+[url=https://www.youtube.com/@16bitdev/videos]16bitdev[/url]
+
+[font_size=24]StayAtHomeDev[/font_size]
+[url=https://www.youtube.com/@stayathomedev]StayAtHomeDev[/url]
+"
+script = ExtResource("1_jacrc")

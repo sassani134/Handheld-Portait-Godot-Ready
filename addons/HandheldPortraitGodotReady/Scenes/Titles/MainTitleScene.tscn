@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://0rdwyesftjm7"]
+
+[ext_resource type="Script" uid="uid://cm6bj2rsmlwgi" path="res://addons/HandheldPortraitGodotReady/Scripts/Title/MainTitle.gd" id="1_hm3pf"]
+[ext_resource type="FontFile" uid="uid://dikhr5qtlwygm" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Ubuntu/Ubuntu-BoldItalic.ttf" id="2_2w6no"]
+[ext_resource type="FontFile" uid="uid://c8tgxa47cmvfd" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Myfont00-Regular.ttf" id="3_alr11"]
+[ext_resource type="Script" uid="uid://4aqpkejgos17" path="res://addons/HandheldPortraitGodotReady/Scripts/Debug/tweenRichText1.gd" id="3_lalko"]
+[ext_resource type="AudioStream" uid="uid://b0532ibo6loiw" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/startupJingle.ogg" id="4_2w6no"]
+
+[node name="MainTitle" type="Control" unique_id=735936871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hm3pf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1450226976]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainerSafeZone" type="MarginContainer" parent="." unique_id=1964137664]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainerTitle" type="VBoxContainer" parent="MarginContainerSafeZone" unique_id=2101552404]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="RichTextLabelTitle" type="RichTextLabel" parent="MarginContainerSafeZone/VBoxContainerTitle" unique_id=100094530]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_2w6no")
+bbcode_enabled = true
+text = "GODOT READY"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_lalko")
+
+[node name="RichTextLabelTitle2" type="RichTextLabel" parent="MarginContainerSafeZone/VBoxContainerTitle" unique_id=1990164974]
+custom_minimum_size = Vector2(240, 48)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_alr11")
+bbcode_enabled = true
+text = "[center][font_size=80][color=#ff00ff]H[/color][color=#aa00ff]a[/color][color=#00ff44]n[/color][color=#ffdd00]d[/color][color=#00ddff]h[/color][color=#00ddff]e[/color][color=#ffdd00]l[/color][color=#00ff44]d[/color] [color=#aa00ff]P[/color][color=#ff00ff]o[/color][color=#ff00ff]r[/color][color=#aa00ff]t[/color][color=#00ff44]r[/color][color=#ffdd00]a[/color][color=#00ddff]i[/color][color=#00ddff]t[/color][/font_size][/center]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainerSafeZone/VBoxContainerTitle" unique_id=2043048512]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 42
+text = "Touch screen or press any button"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1383321312]
+stream = ExtResource("4_2w6no")
+bus = &"Sfx"
+
+[node name="Timer" type="Timer" parent="." unique_id=1362926548]
+wait_time = 60.0
+autostart = true

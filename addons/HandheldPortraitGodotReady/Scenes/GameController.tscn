@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://d1f5oobf5xpis"]
+
+[ext_resource type="Script" uid="uid://phdl56w5hixi" path="res://addons/HandheldPortraitGodotReady/Scripts/GameController.gd" id="1_ba524"]
+[ext_resource type="PackedScene" uid="uid://dlwh23kp2igij" path="res://addons/HandheldPortraitGodotReady/Scenes/SplashSceneManager.tscn" id="2_a7dip"]
+[ext_resource type="PackedScene" uid="uid://bab8geijxqsi8" path="res://addons/HandheldPortraitGodotReady/Scenes/TransitionManager.tscn" id="3_em1kt"]
+
+[node name="GameController" type="Node" unique_id=1765336857 node_paths=PackedStringArray("world_3d", "world_2d", "gui")]
+script = ExtResource("1_ba524")
+world_3d = NodePath("World3D")
+world_2d = NodePath("World2D")
+gui = NodePath("GUI")
+
+[node name="World2D" type="Node2D" parent="." unique_id=1073813975]
+
+[node name="World3D" type="Node3D" parent="." unique_id=514964992]
+
+[node name="GUI" type="Control" parent="." unique_id=622365824]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SplashSceneManager" parent="GUI" unique_id=1637214189 instance=ExtResource("2_a7dip")]
+top_level = true
+layout_mode = 1
+
+[node name="TransitionManager" parent="." unique_id=1845463255 instance=ExtResource("3_em1kt")]

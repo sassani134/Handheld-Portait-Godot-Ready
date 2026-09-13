@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b8qo1jsq0jul6"]
+
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="1_uee8i"]
+
+[node name="UiButtons" type="Button" unique_id=1759702616]
+offset_transform_enabled = true
+script = ExtResource("1_uee8i")

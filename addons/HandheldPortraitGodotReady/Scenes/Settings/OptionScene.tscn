@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://brdl8aqv7233w"]
+
+[ext_resource type="Script" uid="uid://dbrka6lyotwbp" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/OptionScene.gd" id="1_02hon"]
+[ext_resource type="PackedScene" uid="uid://c2mdyqt6t00vw" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/ControlsActionsInputConfigScene.tscn" id="1_w1oeb"]
+[ext_resource type="PackedScene" uid="uid://dy45ciets6drn" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/AudioConfigScene.tscn" id="2_cy2wj"]
+[ext_resource type="PackedScene" uid="uid://46xhjuo5y8bm" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/VideoConfigScene.tscn" id="3_qqbe8"]
+[ext_resource type="PackedScene" uid="uid://bqqpq11uxnbo4" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/ControllerConfigScene.tscn" id="4_cy2wj"]
+[ext_resource type="PackedScene" uid="uid://1b477ikk3fw6" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/MobilePlacementScene.tscn" id="5_qqbe8"]
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="7_1tqyh"]
+[ext_resource type="PackedScene" uid="uid://dvw6l0s4rnpe4" path="res://addons/HandheldPortraitGodotReady/Scenes/Settings/JoypadsDemoEnhanced/JoypadsScene.tscn" id="7_2jwv2"]
+
+[node name="OptionScene" type="Control" unique_id=996679731 node_paths=PackedStringArray("return_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02hon")
+return_button = NodePath("MarginContainer/VBoxContainer/ButtonBack")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2008249787]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=458581570]
+layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer" unique_id=171399437]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+
+[node name="Inputs" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1676725703 instance=ExtResource("1_w1oeb")]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Audio" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=2012037920 instance=ExtResource("2_cy2wj")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Video" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=323392761 instance=ExtResource("3_qqbe8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="ControllerConfigScene" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=1810664440 instance=ExtResource("4_cy2wj")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+
+[node name="MobilePlacementScene" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=434682961 instance=ExtResource("5_qqbe8")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 4
+
+[node name="JoypadsDemo" parent="MarginContainer/VBoxContainer/TabContainer" unique_id=638673023 instance=ExtResource("7_2jwv2")]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 5
+
+[node name="ButtonBack" type="Button" parent="MarginContainer/VBoxContainer" unique_id=166769039 groups=["ui_buttons"]]
+layout_mode = 2
+text = "KEY_BACK"
+script = ExtResource("7_1tqyh")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"

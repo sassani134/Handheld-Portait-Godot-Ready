@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://b3g0mekaw3qcl"]
+
+[ext_resource type="Texture2D" uid="uid://cqoh1fdy8e2gl" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/JoypadDiagrams/digramNSOGamecube.png" id="1_sduun"]
+[ext_resource type="Texture2D" uid="uid://bvuidmm72b2a4" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/JoypadDiagrams/indicators.png" id="2_x27rm"]
+
+[node name="JoypadDiagramGC" type="Sprite2D" unique_id=1950156685]
+position = Vector2(368.635, 155.289)
+scale = Vector2(0.432859, 0.446287)
+texture = ExtResource("1_sduun")
+metadata/_edit_lock_ = true
+
+[node name="Buttons" type="Node2D" parent="." unique_id=861522126]
+
+[node name="0" type="Sprite2D" parent="Buttons" unique_id=168266935]
+editor_description = "JoyButton JOY_BUTTON_A = 0
+
+Game controller SDL button A. Corresponds to the bottom action button: Sony Cross, Xbox A, Nintendo B."
+position = Vector2(148.855, 52.865326)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="1" type="Sprite2D" parent="Buttons" unique_id=1897754495]
+position = Vector2(186.894, 14.427719)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="2" type="Sprite2D" parent="Buttons" unique_id=1305122211]
+position = Vector2(113.50201, 14.427719)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="3" type="Sprite2D" parent="Buttons" unique_id=2060973759]
+position = Vector2(150.198, -20.730377)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="4" type="Sprite2D" parent="Buttons" unique_id=1284512432]
+position = Vector2(-45.60675, -72.92345)
+scale = Vector2(0.810497, 0.57205)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="5" type="Sprite2D" parent="Buttons" unique_id=563868711]
+position = Vector2(5.064011, -61.62545)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="6" type="Sprite2D" parent="Buttons" unique_id=1234808766]
+position = Vector2(57.32215, -71.18725)
+scale = Vector2(0.810497, 0.57205)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="7" type="Sprite2D" parent="Buttons" unique_id=1781392411]
+position = Vector2(-146.1553, 9.741333)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="8" type="Sprite2D" parent="Buttons" unique_id=231342855]
+position = Vector2(82.725174, 103.73221)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="9" type="Sprite2D" parent="Buttons" unique_id=1482097792]
+position = Vector2(-156.25185, -79.07244)
+scale = Vector2(2.9149942, 2.688851)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(10, 10, 10, 10)
+
+[node name="10" type="Sprite2D" parent="Buttons" unique_id=905084765]
+position = Vector2(167.17911, -74.59102)
+scale = Vector2(3.3604698, 2.5738423)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(10, 10, 10, 10)
+
+[node name="11" type="Sprite2D" parent="Buttons" unique_id=613049317]
+position = Vector2(-80.128296, 72.87376)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="12" type="Sprite2D" parent="Buttons" unique_id=1436527619]
+position = Vector2(-80.56427, 141.83325)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="13" type="Sprite2D" parent="Buttons" unique_id=1399167803]
+position = Vector2(-112.98828, 107.92356)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="14" type="Sprite2D" parent="Buttons" unique_id=1821644103]
+position = Vector2(-45.81128, 107.07686)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="15" type="Sprite2D" parent="Buttons" unique_id=1639289736]
+position = Vector2(4.563951, -18.719452)
+scale = Vector2(0.810497, 0.57205)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 45)
+
+[node name="Axes" type="Node2D" parent="." unique_id=912553716]
+
+[node name="0-" type="Sprite2D" parent="Axes" unique_id=1573879412]
+position = Vector2(-173.05402, 10.251343)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="0+" type="Sprite2D" parent="Axes" unique_id=1700621911]
+position = Vector2(-118.972015, 9.828339)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="1-" type="Sprite2D" parent="Axes" unique_id=1221170608]
+position = Vector2(-146.30472, -16.75467)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="1+" type="Sprite2D" parent="Axes" unique_id=241219316]
+position = Vector2(-146.0863, 38.23433)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="2-" type="Sprite2D" parent="Axes" unique_id=1033200524]
+position = Vector2(55.65788, 103.514206)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="2+" type="Sprite2D" parent="Axes" unique_id=1367905819]
+position = Vector2(109.74168, 104.2262)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(50, 0, 14, 54)
+
+[node name="3-" type="Sprite2D" parent="Axes" unique_id=883390898]
+position = Vector2(83.498375, 77.355194)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="3+" type="Sprite2D" parent="Axes" unique_id=462629463]
+position = Vector2(82.843575, 131.7082)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_x27rm")
+flip_v = true
+region_enabled = true
+region_rect = Rect2(50, 0, 54, 14)
+
+[node name="4" type="Sprite2D" parent="Axes" unique_id=1480003175]
+position = Vector2(-156.25183, -123.886665)
+scale = Vector2(1.0458, 2.16952)
+texture = ExtResource("2_x27rm")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 22)
+
+[node name="5" type="Sprite2D" parent="Axes" unique_id=943217899]
+position = Vector2(155.62807, -126.12738)
+scale = Vector2(1.0458, 2.16952)
+texture = ExtResource("2_x27rm")
+region_enabled = true
+region_rect = Rect2(0, 0, 45, 22)

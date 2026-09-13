@@ -1,0 +1,51 @@
+extends Control
+
+@export var load_scene: PackedScene
+@export var in_time: float = 0.5
+@export var fade_in_time: float = 1.5
+@export var pause_time: float = 1.5
+@export var fade_out_time: float = 1.5
+@export var out_time: float = 0.5
+#@export var splash_screen : TextureRect
+@export var splash_screen_container: Node
+
+var splash_screens: Array
+
+# signal continue
+
+# if node and name hasard_ choose a child texture rect aleatoir
+# If 
+
+
+func get_screens() -> void:
+	splash_screens = splash_screen_container.get_children()
+	for screen in splash_screens:
+		screen.modulate.a = 0.0
+
+func fade() -> void:
+	for screen in splash_screens:
+		var tween = self.create_tween()
+		# if video or scripted scenes 2D/3D
+		if screen is VideoStreamPlayer:
+			print("play video")
+			screen.play()
+		tween.tween_interval(in_time)
+		tween.tween_property(screen, "modulate:a", 1.0, fade_in_time)
+		tween.tween_interval(pause_time)
+		tween.tween_property(screen, "modulate:a", 0.0, fade_out_time)
+		tween.tween_interval(out_time)
+		await tween.finished
+		 
+	#get_tree().change_scene_to_packed("res://Scenes/UI/TitleAndSystem/TitleScreen.tscn") # i think i need to change this line for globals
+	Global.game_controller.change_gui_scene("res://addons/HandheldPortraitGodotReady/Scenes/Titles/MainTitleScene.tscn")
+
+func _ready() -> void:
+	get_screens()
+	fade()
+
+# Change it so it stop tween and change screen
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_pressed():
+		# get_tree().change_scene_to_packed(load_scene)
+		Global.game_controller.change_gui_scene("res://addons/HandheldPortraitGodotReady/Scenes/Titles/MainTitleScene.tscn")
+# emit a signal continue the loop
