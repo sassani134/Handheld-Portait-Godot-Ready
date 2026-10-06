@@ -23,6 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="SplashSceneManager" parent="GUI" unique_id=1637214189 instance=ExtResource("2_a7dip")]
 top_level = true

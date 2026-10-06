@@ -2,23 +2,23 @@ extends Node
 
 # SVG Path
 const SVG_PATH: String = "res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/"
-const FLAIRS_RES: String = "Flairs/"
-const GENERIC_RES : String = "Generic/"
+const FLAIRS_RES: String = "Flairs/Vector/"
+const GENERIC_RES : String = "Generic/Vector/"
 const KM_RES : String = "Keyboard & Mouse/"
 const META_QUEST_RES : String = "Meta Quest/"
 const GC_RES: String = "Nintendo Gamecube/"
-const SWITCH_RES: String = "Nintendo Switch/"
-const SWITCH2_RES: String = "Nintendo Switch 2/"
-const WII_RES: String = "Nintendo Wii/"
-const WIIU_RES: String = "Nintendo WiiU/"
-const PLAYDATE: String = "Playdate/"
-const PS_RES: String = "PlayStation Series/"
-const STEAM_CONTROLLER_RES: String = "Steam Controller/"
-const STEAM_DECK_RES: String = "Steam Deck/"
-const STEAM_FRAME_RES: String = "Steam Frame/"
-const TOUCH_RES : String = "Touch/"
-const VALVE_INDEX_RES : String = "Valve Index/"
-const XBOX_RES : String = "Xbox Series/"
+const SWITCH_RES: String = "Nintendo Switch/Vector/"
+const SWITCH2_RES: String = "Nintendo Switch 2/Vector/"
+const WII_RES: String = "Nintendo Wii/Vector/"
+const WIIU_RES: String = "Nintendo WiiU/Vector/"
+const PLAYDATE: String = "Playdate/Vector/"
+const PS_RES: String = "PlayStation Series/Vector/"
+const STEAM_CONTROLLER_RES: String = "Steam Controller/Vector/"
+const STEAM_DECK_RES: String = "Steam Deck/Vector/"
+const STEAM_FRAME_RES: String = "Steam Frame/Vector/"
+const TOUCH_RES : String = "Touch/Vector/"
+const VALVE_INDEX_RES : String = "Valve Index/Vector/"
+const XBOX_RES : String = "Xbox Series/Vector/"
 
 # Key Mapping
 const KEY_SVG_MAP: Dictionary[Key,String] = {
@@ -196,8 +196,8 @@ const MOUSE_BUTTON_SVG_MAP: Dictionary[MouseButton,String] = {
 	MOUSE_BUTTON_WHEEL_DOWN: "mouse_scroll_down.svg",
 	MOUSE_BUTTON_WHEEL_LEFT: "mouse_scroll_left.svg",
 	MOUSE_BUTTON_WHEEL_RIGHT: "mouse_scroll_right.svg",
-	MOUSE_BUTTON_XBUTTON1: "mouse_x1.svg",
-	MOUSE_BUTTON_XBUTTON2: "mouse_x2.svg",
+	MOUSE_BUTTON_XBUTTON1: "mouse_side_forward.svg",
+	MOUSE_BUTTON_XBUTTON2: "mouse_side_back.svg",
 }
 
 # Mapping des actions InputMap vers les SVG

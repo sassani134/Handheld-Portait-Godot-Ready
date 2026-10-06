@@ -19,16 +19,16 @@ var audio_settings: Dictionary = {
 
 
 var gamepad_controls_settings: Dictionary = {
-	"controller_move_up": "Left Stick Y -",
-	"controller_move_down": "Left Stick Y +",
-	"controller_move_right": "Left Stick X -",
-	"controller_move_left": "Left Stick X +",
-	"controller_action_right": "",# JOY_BUTTON_B = 1
-	"controller_action_bottom": "",# JOY_BUTTON_A = 0
-	"controller_action_top":"", # JOY_BUTTON_Y = 3
-	"controller_action_left":"", # JOY_BUTTON_X = 2
-	"controller_start": "",# JOY_BUTTON_START = 6
-	"controller_select":""# JOY_BUTTON_BACK = 4
+	"controller_move_up": "JOY_BUTTON_DPAD_UP", #Left Stick Y - # JOY_AXIS_LEFT_Y
+	"controller_move_down": "JOY_BUTTON_DPAD_DOWN", #Left Stick Y + # JOY_AXIS_LEFT_Y
+	"controller_move_right": "JOY_BUTTON_DPAD_RIGHT", #Right Stick X - # JOY_AXIS_RIGHT_Y
+	"controller_move_left": "JOY_BUTTON_DPAD_LEFT", #Right Stick X + # JOY_AXIS_LEFT_Y
+	"controller_action_right": "JOY_BUTTON_B",# JOY_BUTTON_B = 1
+	"controller_action_bottom": "JOY_BUTTON_A",# JOY_BUTTON_A = 0
+	"controller_action_top":"JOY_BUTTON_Y", # JOY_BUTTON_Y = 3
+	"controller_action_left":"JOY_BUTTON_X", # JOY_BUTTON_X = 2
+	"controller_start": "JOY_BUTTON_START",# JOY_BUTTON_START = 6
+	"controller_select":"JOY_BUTTON_BACK"# JOY_BUTTON_BACK = 4
 }
 # JoyButton
 
@@ -37,16 +37,16 @@ var gamepad_controls_settings: Dictionary = {
 # action String
 # [string, InputMap get action]
 var mobile_controls_settings: Dictionary = {
-	"mobile_move_up": "",
-	"mobile_move_down": "",
-	"mobile_move_right": "",
-	"mobile_move_left": "",
-	"mobile_action_right": "",
-	"mobile_action_bottom": "",
-	"mobile_action_top":"",
-	"mobile_action_left":"",
-	"mobile_start": "",
-	"mobile_select":""
+	"mobile_move_up": "JOY_BUTTON_DPAD_UP", #Left Stick Y - # JOY_AXIS_LEFT_Y
+	"mobile_move_down": "JOY_BUTTON_DPAD_DOWN", #Left Stick Y + # JOY_AXIS_LEFT_Y
+	"mobile_move_right": "JOY_BUTTON_DPAD_RIGHT", #Right Stick X - # JOY_AXIS_RIGHT_Y
+	"mobile_move_left": "JOY_BUTTON_DPAD_LEFT", #Right Stick X + # JOY_AXIS_LEFT_Y
+	"mobile_action_right": "JOY_BUTTON_B",# JOY_BUTTON_B = 1
+	"mobile_action_bottom": "JOY_BUTTON_A",# JOY_BUTTON_A = 0
+	"mobile_action_top":"JOY_BUTTON_Y", # JOY_BUTTON_Y = 3
+	"mobile_action_left":"JOY_BUTTON_X", # JOY_BUTTON_X = 2
+	"mobile_start": "JOY_BUTTON_START",# JOY_BUTTON_START = 6
+	"mobile_select":"JOY_BUTTON_BACK"# JOY_BUTTON_BACK = 4
 }
 
 var mk_controls_settings: Dictionary = {

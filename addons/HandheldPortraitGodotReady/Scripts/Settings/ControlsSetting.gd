@@ -1,7 +1,9 @@
 extends Control
 
+"""
+All buttons on the scene
+"""
 # Mobile
-# maybe have the same input as controller for now
 @export_category("Mobile")
 @export var up_button_mobile: Button
 @export var down_button_mobile: Button
@@ -43,7 +45,8 @@ extends Control
 @export_category("Misc")
 @export var reset_button: Button
 
-const ACTIONSALL = {
+# Dict[nameOfNode, InputMap Action], 
+const ACTIONSALL : Dictionary[String,String]= {
 	"mobile_up": "mobile_move_up",
 	"mobile_down": "mobile_move_down",
 	"mobile_left": "mobile_move_left",
@@ -80,8 +83,8 @@ var waiting_for_input: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_update_button_labels()
-	#_update_button_icons()
+	# _update_button_labels()
+	_update_button_icons()
 	#connect signal to func
 	up_button_mobile.pressed.connect(_on_rebind_button_pressed.bind("mobile_up"))
 	down_button_mobile.pressed.connect(_on_rebind_button_pressed.bind("mobile_down"))
@@ -206,12 +209,12 @@ func _update_button_label(direction: String):
 #func to update text for every button
 func _update_button_labels():
 	for dir in ACTIONSALL.keys():
-		print("dir : "+dir)
+		# print("dir : "+dir)
 		_update_button_label(dir)
  
 # in update button icon get svg from action name
 # inputToSVG
-func _update_button_icon(direction: String):
+func _old_update_button_icon(direction: String):
 	var action_name = ACTIONSALL[direction] #value
 	print(action_name)
 	var events = InputMap.action_get_events(action_name)
@@ -219,7 +222,12 @@ func _update_button_icon(direction: String):
 	# events:[InputEventJoypadButton: button_index=3, pressed=true, pressure=0.00]
 	# events:[InputEventKey: keycode=87 (W), mods=none, physical=true, location=unspecified, pressed=false, echo=false]
 	# events:[InputEventMouseButton: button_index=2, mods=none, pressed=false, canceled=false, position=((0.0, 0.0)), button_mask=0, double_click=false]
-
+	# JoyAxis.JOY_AXIS_LEFT_X
+	# JoyButton.JOY_BUTTON_START
+	# controller_move_up="Left Stick Y -"
+	# controller_move_down="Left Stick Y +"
+	# controller_move_right="Left Stick X -"
+	# controller_move_left="Left Stick X +"
 
 	print("events:" + str(events))
 	print("events class : " + events[0].get_class())
@@ -258,16 +266,71 @@ func _update_button_icon(direction: String):
 	btn.text = "%s" % [label_text]
 	#btn.icon = load(icon_text) as Texture2D
 
+func _update_button_icon(direction: String) -> void:
+	print("_update_button_icon Direction : " + direction)
+	var action_name = ACTIONSALL[direction] #value
+	print("_update_button_icon Action Name : " + action_name)
+	var events = InputMap.action_get_events(action_name)
+	# events:[InputEventJoypadMotion: axis=1, axis_value=-1.00] 
+	# events:[InputEventJoypadButton: button_index=3, pressed=true, pressure=0.00]
+	# events:[InputEventKey: keycode=87 (W), mods=none, physical=true, location=unspecified, pressed=false, echo=false]
+	# events:[InputEventMouseButton: button_index=2, mods=none, pressed=false, canceled=false, position=((0.0, 0.0)), button_mask=0, double_click=false]
+
+
+	# print("events:" + str(events))
+	# print("events class : " + events[0].get_class())
+	var label_text := "Unassigned"
+	var icon_text : Texture2D
+	var icon_path : String
+ 
+	if events.size() > 0:
+		var event = events[0]
+		print("events[0] : " + str(event))
+		if events is InputEventKey:
+			icon_path = FindSvgInput.get_svg_for_key(event.keycode)
+			pass
+		elif events is InputEventGesture:
+			# icon_path = FindSvgInput
+			#ayo for mobile
+			pass
+		elif events is InputEventMouseButton:
+			icon_path = FindSvgInput.get_svg_for_mouse_button(event.button_index)
+			pass
+		elif events is InputEventMouseMotion:
+			# icon_path = FindSvgInput.get_svg
+			pass
+		elif events is InputEventJoypadButton:
+			var joy_button_event := events as InputEventJoypadButton
+			var button: JoyButton = joy_button_event.button_index
+			icon_path = FindSvgInput.get_svg_for_joy_button(Input.get_joy_name(0), button)
+			pass
+		elif events is InputEventJoypadMotion:
+			var axis: JoyAxis = events.axis
+			var value: float = events.axis_value
+			icon_path = FindSvgInput.get_svg_for_joy_axis(Input.get_joy_name(0),axis, value)
+			pass
+	
+	print("IconPath : " + icon_path )
+
+
+	var btn = _get_button_all0(direction)
+	btn.text = "%s" % [label_text]
+	btn.icon = load(icon_path) as Texture2D
+
+	
+
+
 func _update_button_icons():
 	for dir in ACTIONSALL.keys():
 		print(dir)
 		_update_button_icon(dir)
 
-# function to rebind & wiat for input & store the name of action
+# function to rebind & wait for input & store the name of action
 func _on_rebind_button_pressed(direction: String):
 	waiting_for_input = direction
 	var btn = _get_button_all0(direction)
 	btn.text = "..."
+	# show modal
 	set_process_input(true)
  
 func _input(event):
@@ -275,21 +338,19 @@ func _input(event):
 		return
  
 	if event is InputEventKey and event.pressed:
+		# memoise the action name ??
 		var direction = waiting_for_input
 		var action_name = ACTIONSALL[direction]
  
 		InputMap.action_erase_events(action_name) # erase the previous event 
 		InputMap.action_add_event(action_name, event) # add new event to the action name
- 
-		_update_button_label(direction) # Update the button
+		
+		# add an func modal
+		# _update_button_label(direction) # Update the button label 
+		_update_button_icon(direction) # Update the button
  
 		waiting_for_input = "" # reset the input variable
 		set_process_input(false)
-
-	if event is InputEventJoypadButton and event.pressed:
-		print("jb in Input: "+ event)
-	if event is InputEventJoypadMotion and event.pressed:
-		print("jm in Input: "+ event)
 
 func _on_reset_button_pressed():
 	# cofirmation are you sure
@@ -297,3 +358,24 @@ func _on_reset_button_pressed():
 	print("reset ")
 
 # create a pop up menu ?????
+"""
+func get_svg_for_key(key: Key) -> String:
+func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
+func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> String:
+func get_svg_for_mouse_button(button: MouseButton) -> String:
+"""
+
+"""
+var key: Key = key_event.keycode          # or .physical_keycode
+var button: MouseButton = mouse_event.button_index
+
+var button: JoyButton = joy_button_event.button_index
+texture_rect.texture = load(FindSvgInput.get_svg_for_joy_button(Input.get_joy_name(0), button)) as Texture2D
+
+var motion := event as InputEventJoypadMotion
+var axis: JoyAxis = motion.axis
+var value: float = motion.axis_value
+texture_rect.texture = load(FindSvgInput.get_svg_for_joy_axis(Input.get_joy_name(0),axis ,value)) as Texture2D
+
+
+"""

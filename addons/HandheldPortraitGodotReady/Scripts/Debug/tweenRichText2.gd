@@ -47,7 +47,8 @@ func _animate_char_color(index: int, delay: float):
 	# Animation arc-en-ciel (boucle continue)
 	tween.tween_method(
 		func(time: float):
-			var hue = time % 1.0
+			#var hue = time % 1.0
+			var hue = fmod(time, 1.0)
 			var color = Color.from_hsv(hue, 1.0, 0.9)
 			_char_colors[index] = color
 			_update_text(),
