@@ -1,10 +1,24 @@
 extends Node
 
+#joy_axis_left_y_neg
+#joy_axis_left_y_pos
+#joy_axis_left_x_neg
+#joy_axis_left_x_pos
+#
+#joy_axis_right_y_neg
+#joy_axis_right_y_pos
+#joy_axis_right_x_neg
+#joy_axis_right_x_pos
+#
+#(Négatif = Gauche, Positif = Droite)
+#(Négatif = Haut, Positif = Bas)
+
+
 # SVG Path
 const SVG_PATH: String = "res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/"
 const FLAIRS_RES: String = "Flairs/Vector/"
 const GENERIC_RES : String = "Generic/Vector/"
-const KM_RES : String = "Keyboard & Mouse/"
+const KM_RES : String = "Keyboard & Mouse/Vector/"
 const META_QUEST_RES : String = "Meta Quest/"
 const GC_RES: String = "Nintendo Gamecube/"
 const SWITCH_RES: String = "Nintendo Switch/Vector/"
@@ -18,7 +32,7 @@ const STEAM_DECK_RES: String = "Steam Deck/Vector/"
 const STEAM_FRAME_RES: String = "Steam Frame/Vector/"
 const TOUCH_RES : String = "Touch/Vector/"
 const VALVE_INDEX_RES : String = "Valve Index/Vector/"
-const XBOX_RES : String = "Xbox Series/Vector/"
+const XBOX_RES : String = "Xbox Series/"
 
 # Key Mapping
 const KEY_SVG_MAP: Dictionary[Key,String] = {
@@ -212,7 +226,8 @@ func get_svg_for_key(key: Key) -> String:
 	"""
 	if KEY_SVG_MAP.has(key):
 		return SVG_PATH + KM_RES + KEY_SVG_MAP[key]
-	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
+		# this return is temporary
+	return "res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/flair_disabled_outline.svg"
 
 func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
 	"""
@@ -237,7 +252,8 @@ func get_svg_for_joy_button(manette : String, button: JoyButton) -> String:
 		_:
 			path_controller = path_controller + GENERIC_RES
 	if JOY_BUTTON_SVG_MAP_STANDARD.has(button):
-		return path_controller + "standard/"+ JOY_BUTTON_SVG_MAP_STANDARD[button] # standarisé les noms des buttons
+		#return path_controller + "standard/"+ JOY_BUTTON_SVG_MAP_STANDARD[button] # standarisé les noms des buttons
+		return path_controller + JOY_BUTTON_SVG_MAP_STANDARD[button] # standarisé les noms des buttons
 	return "res://addons/inputtosvg/Assets/KenneyInput/Flairs/flair_disabled_cross.svg"
 
 func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> String:
@@ -261,7 +277,7 @@ func get_svg_for_joy_axis(manette : String, axis: JoyAxis, value: float) -> Stri
 			path_controller = path_controller + SWITCH2_RES
 		_:
 			path_controller = path_controller + GENERIC_RES
-	path_controller = path_controller + "standard/"
+	#path_controller = path_controller + "standard/"
 	if JOY_AXIS_SVG_MAP_STANDARD.has(axis):
 		path_controller = path_controller + JOY_AXIS_SVG_MAP_STANDARD[axis]
 		if axis == JOY_AXIS_TRIGGER_LEFT or axis == JOY_AXIS_TRIGGER_RIGHT:

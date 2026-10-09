@@ -85,7 +85,7 @@ var waiting_for_input: String = ""
 func _ready():
 	# _update_button_labels()
 	_update_button_icons()
-	#connect signal to func
+	# connect signal to func
 	up_button_mobile.pressed.connect(_on_rebind_button_pressed.bind("mobile_up"))
 	down_button_mobile.pressed.connect(_on_rebind_button_pressed.bind("mobile_down"))
 	left_button_mobile.pressed.connect(_on_rebind_button_pressed.bind("mobile_left"))
@@ -281,43 +281,54 @@ func _update_button_icon(direction: String) -> void:
 	# print("events class : " + events[0].get_class())
 	var label_text := "Unassigned"
 	var icon_text : Texture2D
-	var icon_path : String
- 
-	if events.size() > 0:
+	var icon_path : String = "res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Generic/Vector/generic_joystick_red.svg"
+ 	
+	print(str(events))
+	if events.size() >= 0: #1
+		print("i'am in events.size \n ")
 		var event = events[0]
-		print("events[0] : " + str(event))
-		if events is InputEventKey:
+		if event is InputEventKey:
 			icon_path = FindSvgInput.get_svg_for_key(event.keycode)
+			
+			print_rich("[color=cyan][b]InputEventKey :[/b][/color] : " + str(event) + "\n")
+
 			pass
-		elif events is InputEventGesture:
+		elif event is InputEventGesture:
 			# icon_path = FindSvgInput
 			#ayo for mobile
+			print_rich("[color=cyan][b]InputEventGesture :[/b][/color] : " + str(event) + "\n")
+
 			pass
-		elif events is InputEventMouseButton:
+		elif event is InputEventMouseButton:
 			icon_path = FindSvgInput.get_svg_for_mouse_button(event.button_index)
+			print_rich("[color=cyan][b]InputEventGesture :[/b][/color] : " + str(event) + "\n")
 			pass
-		elif events is InputEventMouseMotion:
+		elif event is InputEventMouseMotion:
 			# icon_path = FindSvgInput.get_svg
+			print_rich("[color=cyan][b]InputEventGesture :[/b][/color] : " + str(event) + "\n")
 			pass
-		elif events is InputEventJoypadButton:
-			var joy_button_event := events as InputEventJoypadButton
+		elif event is InputEventJoypadButton:
+			var joy_button_event := event as InputEventJoypadButton
 			var button: JoyButton = joy_button_event.button_index
 			icon_path = FindSvgInput.get_svg_for_joy_button(Input.get_joy_name(0), button)
+			print_rich("[color=cyan][b]InputEventGesture :[/b][/color] : " + str(event) + "\n")
 			pass
-		elif events is InputEventJoypadMotion:
-			var axis: JoyAxis = events.axis
-			var value: float = events.axis_value
+		elif event is InputEventJoypadMotion:
+			var axis: JoyAxis = event.get_axis()
+			var value: float = event.get_axis_value()
 			icon_path = FindSvgInput.get_svg_for_joy_axis(Input.get_joy_name(0),axis, value)
+			print_rich("[color=cyan][b]InputEventGesture :[/b][/color] : " + str(event) + "\n")
 			pass
 	
 	print("IconPath : " + icon_path )
 
 
 	var btn = _get_button_all0(direction)
-	btn.text = "%s" % [label_text]
+	btn.text = ""
+	print(icon_path)
 	btn.icon = load(icon_path) as Texture2D
-
 	
+
 
 
 func _update_button_icons():
@@ -334,13 +345,16 @@ func _on_rebind_button_pressed(direction: String):
 	set_process_input(true)
  
 func _input(event):
+	#print("_input : " + str(event))
 	if waiting_for_input == "":
 		return
  
 	if event is InputEventKey and event.pressed:
 		# memoise the action name ??
 		var direction = waiting_for_input
+		print("Direction : " + direction)
 		var action_name = ACTIONSALL[direction]
+		print("Action name : " + action_name)
  
 		InputMap.action_erase_events(action_name) # erase the previous event 
 		InputMap.action_add_event(action_name, event) # add new event to the action name

@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bavrp4hrawife"]
+
+[ext_resource type="Script" uid="uid://dmtf4bkip2kn8" path="res://addons/HandheldPortraitGodotReady/Scripts/Props/UiButtons.gd" id="1_2pjpe"]
+[ext_resource type="Script" uid="uid://crw5v5hsre7sb" path="res://addons/HandheldPortraitGodotReady/Scripts/Settings/inputRemapScene.gd" id="1_sp8jn"]
+
+[node name="InputRemapScene" type="Control" unique_id=1882019687 node_paths=PackedStringArray("action_rows", "description", "reset_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sp8jn")
+action_rows = NodePath("MarginContainer/VBoxContainer/ScrollContainer/ActionList")
+description = NodePath("MarginContainer/VBoxContainer/Description")
+reset_button = NodePath("MarginContainer/VBoxContainer/ButtonReset")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1344290018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=429226625]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=474536333]
+layout_mode = 2
+text = "ACTIONS_INPUTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1374372490]
+layout_mode = 2
+text = "Some Info"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=877484701]
+layout_mode = 2
+theme_override_constants/separation = 96
+
+[node name="ActionHeader" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=670024711]
+layout_mode = 2
+text = "Action"
+
+[node name="KeyboardHeader" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1567775195]
+layout_mode = 2
+text = "Keyboard"
+
+[node name="ControllerHeader" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=104476973]
+layout_mode = 2
+text = "Controller"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=542750485]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer" unique_id=782452994]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1558424830 groups=["ui_buttons"]]
+layout_mode = 2
+text = "KEY_RESET"
+script = ExtResource("1_2pjpe")
+metadata/_custom_type_script = "uid://dmtf4bkip2kn8"
