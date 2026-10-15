@@ -30,6 +30,8 @@
 - [The SMART Way to Manage Scenes in Godot](https://youtu.be/32h8BR0FqdI)
 - https://github.com/sassani134/TheOpenSourceBrigade/tree/master
 - https://github.com/godotengine/godot/blob/master/core/input/gamecontrollerdb.txt
+- https://mockuphone.com/
+- https://actionforge.app/
 
 ## recherche google
 La résolution idéale pour un Reel Instagram est de 1080 x 1920 pixels, avec un ratio vertical de 9:16
