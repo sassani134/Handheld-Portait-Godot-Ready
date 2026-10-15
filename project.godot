@@ -12,12 +12,12 @@ config_version=5
 
 config/name="HandheldPortaitGodotReady"
 config/description="Handheld Portait Godot Ready is a template primarily for mobile on Portrait mode  but it works on computer too."
-config/version="0.0.6"
+config/version="0.0.7"
 run/main_scene="uid://d1f5oobf5xpis"
 config/features=PackedStringArray("4.7", "Mobile")
 boot_splash/show_image=false
 boot_splash/stretch_mode=0
-config/icon="res://icon.svg"
+config/icon="uid://bh7t8ed7hrur4"
 
 [autoload]
 
