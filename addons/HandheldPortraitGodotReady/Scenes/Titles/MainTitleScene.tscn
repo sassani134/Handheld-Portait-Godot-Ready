@@ -5,6 +5,10 @@
 [ext_resource type="FontFile" uid="uid://c8tgxa47cmvfd" path="res://addons/HandheldPortraitGodotReady/Assets/Fonts/Myfont00-Regular.ttf" id="3_alr11"]
 [ext_resource type="Script" uid="uid://4aqpkejgos17" path="res://addons/HandheldPortraitGodotReady/Scripts/Debug/tweenRichText1.gd" id="3_lalko"]
 [ext_resource type="AudioStream" uid="uid://b0532ibo6loiw" path="res://addons/HandheldPortraitGodotReady/Assets/Sounds/Sfxs/startupJingle.ogg" id="4_2w6no"]
+[ext_resource type="Texture2D" uid="uid://6dr5xab5gk6j" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/StartSelectButton.png" id="6_55msc"]
+[ext_resource type="Texture2D" uid="uid://c6ghyvtnrsd4n" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Gamecube/gamecube_button_color_a.svg" id="7_mnq4i"]
+[ext_resource type="Texture2D" uid="uid://cwvl2jdkncnui" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Gamecube/gamecube_button_color_b.svg" id="8_38rlj"]
+[ext_resource type="Texture2D" uid="uid://cqynkfkhdvxea" path="res://addons/HandheldPortraitGodotReady/Assets/Pics/kenneyInputPrompts1.5/Nintendo Gamecube/gamecube_dpad.svg" id="9_6x5hb"]
 
 [node name="MainTitle" type="Control" unique_id=735936871]
 layout_mode = 3
@@ -77,3 +81,55 @@ bus = &"Sfx"
 [node name="Timer" type="Timer" parent="." unique_id=1362926548]
 wait_time = 60.0
 autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=383583748]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 192.0
+offset_top = 1152.0
+offset_right = 256.0
+offset_bottom = 1216.0
+scale = Vector2(2, 2)
+texture = ExtResource("6_55msc")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1153281094]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 448.0
+offset_top = 1152.0
+offset_right = 512.0
+offset_bottom = 1216.0
+scale = Vector2(2, 2)
+texture = ExtResource("6_55msc")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=691991794]
+visible = false
+layout_mode = 0
+offset_left = 576.0
+offset_top = 896.0
+offset_right = 640.0
+offset_bottom = 960.0
+scale = Vector2(2, 2)
+texture = ExtResource("7_mnq4i")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1416979005]
+visible = false
+layout_mode = 0
+offset_left = 464.0
+offset_top = 1024.0
+offset_right = 528.0
+offset_bottom = 1088.0
+scale = Vector2(2, 2)
+texture = ExtResource("8_38rlj")
+
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=239665349]
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_top = 896.0
+offset_right = 64.0
+offset_bottom = 960.0
+scale = Vector2(4, 4)
+texture = ExtResource("9_6x5hb")
