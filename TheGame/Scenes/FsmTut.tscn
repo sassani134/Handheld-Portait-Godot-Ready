@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bjhhx7rirqxdo"]
 
 [ext_resource type="PackedScene" uid="uid://bfv17pxv6rowj" path="res://TheGame/Scenes/LevelBlock.tscn" id="1_hvnc2"]
+[ext_resource type="Script" uid="uid://bx54iw1kyde0p" path="res://TheGame/Scripts/Level.gd" id="1_kagq6"]
 [ext_resource type="PackedScene" uid="uid://2tw3gv6ysyb" path="res://TheGame/Scenes/Player.tscn" id="1_o27a6"]
 [ext_resource type="PackedScene" uid="uid://bfqi1nqw5o8ct" path="res://addons/HandheldPortraitGodotReady/Scenes/OverlaysHud/HudVirtualController.tscn" id="3_u7glb"]
 
@@ -12,6 +13,7 @@ tile_size = Vector2i(18, 18)
 sources/0 = SubResource("TileSetScenesCollectionSource_u7glb")
 
 [node name="FsmTut" type="Node2D" unique_id=1338335199]
+script = ExtResource("1_kagq6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=394217211]
 zoom = Vector2(2, 2)
