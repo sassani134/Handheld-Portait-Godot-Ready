@@ -50,7 +50,7 @@ func _update_state(delta: float) -> void:
 				_set_state(STATE.WALK)
 			elif !is_on_floor(): # if not on floor, fall down
 				_set_state(STATE.FALL)
-			elif Input.is_action_just_pressed("action_left"):
+			elif Input.is_action_just_pressed("action_right"):
 				_set_state(STATE.JUMP) # if the jump button is pressed, then jump
 			
 		STATE.WALK: # Update WALK state logic
@@ -62,7 +62,7 @@ func _update_state(delta: float) -> void:
 				
 			if !is_on_floor(): # if not on floor, fall down
 				_set_state(STATE.FALL)
-			elif Input.is_action_just_pressed("action_left"):
+			elif Input.is_action_just_pressed("action_right"):
 				_set_state(STATE.JUMP) # if jump is pressed, jump
 			elif velocity.x == 0: # if standing still, then set idle
 				_set_state(STATE.IDLE)
