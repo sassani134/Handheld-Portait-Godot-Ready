@@ -14,16 +14,18 @@ extends EditorPlugin
 	- ### FindSvgInput (plugin): scripts/Autoloads/FindSvgInput.gd
 - Input Actions ###
 	# Buttons
-		- jump : space joystick button 0
-		- action_fire : left mouse button joystick button 1
-		- action_interact : right mouse button joystick button 2
-		- action_run : shift joystick button 3
-		- action_pause : escape joystick button 7
+		- action_top : R JOY_BUTTON_A
+		- action_bottom : Space JOY_BUTTON_A
+		- action_left : F JOY_BUTTON_B
+		- action_right : MOUSE_BUTTON_LEFT JOY_BUTTON_X
+		- start : Enter
+		- select : Backspace
 	# Joystick
-		- move_left : a joystick axis 0 negative
-		- move_right : d joystick axis 0 positive
-		- move_up : w joystick axis 1 negative
-		- move_down : s joystick axis 1 positive
+		- move_up : W JOY_AXIS_LEFT_Y -
+		- move_down : S JOY_AXIS_LEFT_Y +
+		- move_left : A JOY_AXIS_LEFT_X -
+		- move_right : D JOY_AXIS_LEFT_X +
+
 """
 
 const PLUGIN_DIR : String = "res://addons/HandheldPortraitGodotReady/"
