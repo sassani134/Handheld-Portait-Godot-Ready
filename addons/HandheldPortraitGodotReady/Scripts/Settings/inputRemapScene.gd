@@ -11,7 +11,7 @@ const CONTROLS_PATH := "user://controls.cfg"
 const AXIS_DEADZONE := 0.65
 
 # set action names & store in dictionary
-# action : 
+# action :
 var actions := {
 	"Movement": {
 		"move_up": "Move Up",
@@ -19,23 +19,22 @@ var actions := {
 		"move_left": "Move Left",
 		"move_right": "Move Right"
 	},
-	"Combat": {
-		"attack": "Attack",
-		"heavy_attack": "Heavy Attack",
-		"dash": "Dash",
-		"interact": "Interact"
+	"action": {
+		"action_top": "X",
+		"action_bottom": "Run",
+		"action_left": "Y",
+		"action_right": "Jump"
 	},
 	"Other": {
-		"inventory": "Inventory",
-		"character": "Character",
-		"map": "Map"
+		"start": "Start",
+		"select": "Select"
 	}
 }
 
 # Set export variable to store actions description & reset button
 @export var action_rows: VBoxContainer
 @export var description: Label
-@export var reset_button: Button 
+@export var reset_button: Button
 @export var back_button: Button # no need ??
 
 # set variables for storing default inputs, listening modifier events axis & flags
@@ -650,7 +649,7 @@ func _capture_keyboard(event: InputEvent) -> void:
 		_apply_binding(key, "keyboard")
 		active_modifiers.clear()
 		get_viewport().set_input_as_handled()
-		
+
 		return
 
 	if event is InputEventMouseButton:
