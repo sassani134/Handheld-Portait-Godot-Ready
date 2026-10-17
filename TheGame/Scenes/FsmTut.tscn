@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bjhhx7rirqxdo"]
+
+[ext_resource type="PackedScene" uid="uid://bfv17pxv6rowj" path="res://TheGame/Scenes/LevelBlock.tscn" id="1_hvnc2"]
+[ext_resource type="PackedScene" uid="uid://2tw3gv6ysyb" path="res://TheGame/Scenes/Player.tscn" id="1_o27a6"]
+[ext_resource type="PackedScene" uid="uid://bfqi1nqw5o8ct" path="res://addons/HandheldPortraitGodotReady/Scenes/OverlaysHud/HudVirtualController.tscn" id="3_u7glb"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_u7glb"]
+scenes/1/scene = ExtResource("1_hvnc2")
+
+[sub_resource type="TileSet" id="TileSet_o27a6"]
+tile_size = Vector2i(18, 18)
+sources/0 = SubResource("TileSetScenesCollectionSource_u7glb")
+
+[node name="FsmTut" type="Node2D" unique_id=1338335199]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=394217211]
+zoom = Vector2(2, 2)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1821530081]
+tile_set = SubResource("TileSet_o27a6")
+format = 2
+layer_0/tile_data = PackedInt32Array(131062, 0, 65536, 131063, 0, 65536, 131064, 0, 65536, 131065, 0, 65536, 131066, 0, 65536, 131067, 0, 65536, 131068, 0, 65536, 131069, 0, 65536, 131070, 0, 65536, 131071, 0, 65536, 65536, 0, 65536, 65537, 0, 65536, 65538, 0, 65536, 65539, 0, 65536, 65540, 0, 65536, 65541, 0, 65536, 65542, 0, 65536, 65543, 0, 65536, 65544, 0, 65536, 65545, 0, 65536, 65527, 0, 65536, 65528, 0, 65536, 65529, 0, 65536, -7, 0, 65536, -8, 0, 65536, -9, 0, 65536, 7, 0, 65536, 6, 0, 65536, 5, 0, 65536, -196612, 0, 65536, -196611, 0, 65536, -196610, 0, 65536, -131071, 0, 65536, -131070, 0, 65536)
+
+[node name="Player" parent="." unique_id=1332274419 instance=ExtResource("1_o27a6")]
+
+[node name="HudVirtualController" parent="." unique_id=1233635219 instance=ExtResource("3_u7glb")]

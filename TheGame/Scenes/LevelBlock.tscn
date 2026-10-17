@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bfv17pxv6rowj"]
+
+[ext_resource type="Texture2D" uid="uid://oiiqwoijqwun" path="res://TheGame/Assets/KenneyPixelPlatformer/Tilemap/tilemap_packed.png" id="1_673xy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qt82o"]
+size = Vector2(18, 18)
+
+[node name="LevelBlock" type="StaticBody2D" unique_id=829893044]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=851378768]
+shape = SubResource("RectangleShape2D_qt82o")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1854250491]
+texture_filter = 1
+texture = ExtResource("1_673xy")
+hframes = 20
+vframes = 9

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://diptkui83w0ns"]
+
+[node name="DustCPUParticles2D" type="CPUParticles2D" unique_id=2083759172]
+emitting = false
+one_shot = true
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
