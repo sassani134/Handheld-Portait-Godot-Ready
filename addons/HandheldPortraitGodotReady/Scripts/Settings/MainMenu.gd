@@ -26,7 +26,8 @@ func _ready() -> void:
 #first button grab focus if no focus and pressed down or controller down
 
 func _on_button_play_pressed() -> void:
-	print("Play Button")
+	# Select a file [WIP]
+	Global.game_controller.change_2d_scene("res://TheGame/Scenes/FsmTut.tscn")
 	pass
 
 func _on_button_option_pressed() ->void:
