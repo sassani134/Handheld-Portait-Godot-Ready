@@ -27,7 +27,9 @@ func _ready() -> void:
 
 func _on_button_play_pressed() -> void:
 	# Select a file [WIP]
-	Global.game_controller.change_2d_scene("res://TheGame/Scenes/FsmTut.tscn")
+	#Global.game_controller.change_2d_scene("res://TheGame/Scenes/FsmTut.tscn")
+	Global.game_controller.change_2d_scene("res://TheGame2/Level.tscn")
+	Global.game_controller.current_gui_scene.visible = false
 	pass
 
 func _on_button_option_pressed() ->void:
