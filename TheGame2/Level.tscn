@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://t3jdd6mgqvoo"]
+
+[ext_resource type="PackedScene" uid="uid://bfqi1nqw5o8ct" path="res://addons/HandheldPortraitGodotReady/Scenes/OverlaysHud/HudVirtualController.tscn" id="1_r55yo"]
+[ext_resource type="PackedScene" uid="uid://bfv17pxv6rowj" path="res://TheGame/Scenes/LevelBlock.tscn" id="2_rx1j0"]
+[ext_resource type="PackedScene" uid="uid://2tw3gv6ysyb" path="res://TheGame/Scenes/Player.tscn" id="3_svkv7"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_cmosy"]
+scenes/1/scene = ExtResource("2_rx1j0")
+
+[sub_resource type="TileSet" id="TileSet_qt82o"]
+tile_size = Vector2i(18, 18)
+sources/0 = SubResource("TileSetScenesCollectionSource_cmosy")
+
+[node name="LevelAyo" type="Node2D" unique_id=14365795]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1191490408]
+tile_set = SubResource("TileSet_qt82o")
+format = 2
+layer_0/tile_data = PackedInt32Array(3145728, 0, 65536, 3145729, 0, 65536, 3145730, 0, 65536, 3145731, 0, 65536, 3145732, 0, 65536, 3145733, 0, 65536, 3145734, 0, 65536, 3145735, 0, 65536, 3145736, 0, 65536, 3145737, 0, 65536, 3145738, 0, 65536, 3145739, 0, 65536, 3145740, 0, 65536, 3145741, 0, 65536, 3145742, 0, 65536, 3145743, 0, 65536, 3145744, 0, 65536, 3145745, 0, 65536, 3145746, 0, 65536, 3145747, 0, 65536, 3145748, 0, 65536, 3080213, 0, 65536, 3080214, 0, 65536, 3080215, 0, 65536, 3080216, 0, 65536, 3080217, 0, 65536, 3080218, 0, 65536, 3080219, 0, 65536, 3080220, 0, 65536, 3080221, 0, 65536, 3080222, 0, 65536, 3145759, 0, 65536, 3145760, 0, 65536, 3145761, 0, 65536, 3145762, 0, 65536, 3145763, 0, 65536, 3145764, 0, 65536, 3145765, 0, 65536, 3145766, 0, 65536, 3145767, 0, 65536, 3211303, 0, 65536, 3145749, 0, 65536, 3145750, 0, 65536, 3145751, 0, 65536, 3145752, 0, 65536, 3145753, 0, 65536, 3145754, 0, 65536, 3145755, 0, 65536, 3145756, 0, 65536, 3211292, 0, 65536, 3211293, 0, 65536, 3211294, 0, 65536, 3145758, 0, 65536, 3145757, 0, 65536)
+
+[node name="Player" parent="." unique_id=1332274419 instance=ExtResource("3_svkv7")]
+position = Vector2(334, 839)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1890532101]
+position = Vector2(-334, -839)
+offset = Vector2(360, 640)
+zoom = Vector2(2, 2)
+
+[node name="Control" type="Control" parent="." unique_id=1722634654]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HudVirtualController" parent="." unique_id=1233635219 instance=ExtResource("1_r55yo")]
